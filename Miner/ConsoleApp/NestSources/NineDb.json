@@ -1,0 +1,15 @@
+{
+  "url": "https://9db.jp/pokemongo/ajax_maps/get_spot?is_mst=0&lat1={lat1}&lng1={lng1}&lat2={lat2}&lng2={lng2}&genreg=nest1,nest2&f_gym=null&f_raid=&f_reward=&f_task=",
+  "country_id":  "jp",
+  "requests": {
+    "tokio1": {
+      "lat1": 35.62907242036706,
+      "lng1": 139.62897757685127,
+      "lat2": 35.78268352204532,
+      "lng2": 139.93041495478096
+    }
+  },
+  "specimens": {
+    "290": "0063"
+  }
+}
