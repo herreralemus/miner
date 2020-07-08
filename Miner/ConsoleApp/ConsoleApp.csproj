@@ -8,6 +8,7 @@
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
   <ItemGroup>
+    <PackageReference Include="geohash-dotnet" Version="1.0.4" />
     <PackageReference Include="JObject" Version="1.0.0" />
   </ItemGroup>
 
