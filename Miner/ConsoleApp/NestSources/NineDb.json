@@ -2,23 +2,17 @@
   "url": "https://9db.jp/pokemongo/ajax_maps/get_spot?is_mst=0&lat1={lat1}&lng1={lng1}&lat2={lat2}&lng2={lng2}&genreg=nest1,nest2&f_gym=null&f_raid=&f_reward=&f_task=",
   "country_id": "jp",
   "requests": {
-    "tokio1": {
-      "lat1": 35.62907242036706,
-      "lng1": 139.62897757685127,
-      "lat2": 35.78268352204532,
-      "lng2": 139.93041495478096
+    "tokio": {
+      "lat1": 35.624656,
+      "lat2": 35.778275,
+      "lng1": 139.5753075,
+      "lng2": 139.8825455
     },
-    "tokio2": {
-      "lat1": 35.437872999999996,
-      "lat2": 35.631813,
-      "lng1": 139.32509299999998,
-      "lng2": 139.66653000000002
-    },
-    "kyoto1": {
-      "lat1": 34.914618,
-      "lat2": 35.109555,
-      "lng1": 135.55405399999998,
-      "lng2": 135.89549200000002
+    "nagayoa": {
+      "lat1": 35.067674,
+      "lat2": 35.222358,
+      "lng1": 136.700046,
+      "lng2": 137.009414
     }
   },
   "specimens": {

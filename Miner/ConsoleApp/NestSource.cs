@@ -14,6 +14,8 @@ namespace ConsoleApp
     {
         private Dictionary<string, Nest> nests = new Dictionary<string, Nest>();
         private JObject _config;
+        private readonly string _seasonId = "1593043200000";
+        private readonly string _authorId = "y9ikY8FCVhUOtxGftsPkC12BusO2";
 
         protected JObject Config => _config ?? 
             (
@@ -35,13 +37,16 @@ namespace ConsoleApp
 
         protected string TranslateToSpecimenId(string id)
         {
-            return _config["specimens"]?[id]?.ToString();
+            var newId = _config["specimens"]?[id]?.ToString();
+            if(newId == null)
+                Console.WriteLine($"ERROR: Id \"{id}\" was not translated");
+            return newId;
         }
 
         protected void Add(Nest nest)
         {
             var hasher = new Geohasher();
-            var id = nest.SpecimenId + "|" + hasher.Encode(nest.Latitude, nest.Longitude, 7);
+            var id = _seasonId + "|" + _authorId + "|" + nest.SpecimenId + "|" + hasher.Encode(nest.Latitude, nest.Longitude, 7);
             nests.TryAdd(id, nest);
         }
 
@@ -76,6 +81,7 @@ namespace ConsoleApp
                     client.Encoding = System.Text.Encoding.UTF8;
                     client.Headers.Add("X-Requested-With", "XMLHttpRequest");
                     Normalize(client.DownloadString(url))
+                        .Where(n => n.SpecimenId != null)
                         .ToList()
                         .ForEach(
                             n => {
